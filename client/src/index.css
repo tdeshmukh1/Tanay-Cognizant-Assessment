@@ -1,68 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #1f1f1f;
+  background-color: #f5f7fb;
+  font-family: "Noto Sans", "Segoe UI", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --md-primary: #1a73e8;
+  --md-on-primary: #ffffff;
+  --md-secondary: #185abc;
+  --md-surface: #ffffff;
+  --md-surface-2: #f1f3f4;
+  --md-outline: #d2d6dc;
+  --md-text: #1f1f1f;
+  --md-text-muted: #5f6368;
+  --md-error: #b3261e;
+  --md-shadow-1: 0 1px 3px rgba(60, 64, 67, 0.12), 0 1px 2px rgba(60, 64, 67, 0.16);
+  --md-shadow-2: 0 4px 12px rgba(60, 64, 67, 0.18);
+  --md-focus: #174ea6;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background:
+    radial-gradient(900px 400px at 15% -10%, #e8f0fe 0%, transparent 60%),
+    radial-gradient(700px 350px at 100% 0%, #eef2ff 0%, transparent 55%),
+    #f5f7fb;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+img,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+button,
+textarea,
+input,
+select {
+  font: inherit;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+:focus-visible {
+  outline: 3px solid var(--md-focus);
+  outline-offset: 2px;
 }
