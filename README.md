@@ -16,8 +16,15 @@ Lightweight AI-integrated web app:
 
 ### Server
 ```bash
-cd server
 npm install
-cp .env.example .env
+cp server/.env.example server/.env
 # add OPENAI_API_KEY in server/.env
 npm run dev
+```
+
+### Client (seperate terminal)
+```bash
+cd client
+npm install
+npm run dev
+```
